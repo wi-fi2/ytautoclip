@@ -132,4 +132,4 @@ assets/, custom_fonts/  bundled fonts and BGM used in rendering
 
 ---
 
-For the original project this is based on, see [NaufalRizqullah/opensource-clipping](https://github.com/NaufalRizqullah/opensource-clipping).
+
