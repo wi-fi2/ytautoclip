@@ -1,0 +1,36 @@
+[project]
+name = "opensource-clipping"
+version = "1.12.0"
+description = "AI Auto-Clipper & Teaser Generator — converts long videos into viral short-form clips"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "yt-dlp[default]",
+    "faster-whisper",
+    "google-genai",
+    "mediapipe",
+    "opencv-python",
+    "Pillow",
+    "requests",
+    "python-dotenv",
+    "google-api-python-client",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "ultralytics",
+    "gdown",
+    "fastapi>=0.141.1",
+    "uvicorn[standard]>=0.52.4",
+    "python-multipart>=0.0.32",
+]
+
+[project.optional-dependencies]
+# Apple Silicon (M1+) only: lets Whisper transcription run on the GPU via
+# Metal instead of CPU (faster-whisper/CTranslate2 has no Metal backend).
+# Install with: uv sync --extra apple-gpu
+apple-gpu = [
+    "mlx-whisper; sys_platform == 'darwin' and platform_machine == 'arm64'",
+]
+
+[project.scripts]
+clipping = "main:main"
