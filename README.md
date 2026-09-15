@@ -1,4 +1,4 @@
-# OpenSource Clipping
+# AutoAI Clipping
 
 **Turn a long YouTube video into a batch of short, subtitled, vertical clips — automatically.**
 
